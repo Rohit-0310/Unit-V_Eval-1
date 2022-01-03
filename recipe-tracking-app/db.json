@@ -1,5 +1,9 @@
 {
-    "addFood":[
-
-    ]
+  "addFood": [
+    {
+      "Title": "w",
+      "Ingredients": "w",
+      "id": 1
+    }
+  ]
 }
