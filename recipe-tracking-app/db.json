@@ -1,9 +1,10 @@
 {
   "addFood": [
     {
-      "Title": "apple",
-      "Ingredients": "apple",
-      "Time_to_cook": "45",
+      "Ingredients": "title11",
+      "Title": "title11",
+      "Time_to_cook": "33",
+      "Image": "C:\\fakepath\\978142.png",
       "id": 1
     }
   ]

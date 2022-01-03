@@ -6,6 +6,7 @@ export const Food = () => {
 
     const [text, setText] = useState("");
     const [number, setNumber] = useState("");
+    const [file, setFile] = useState("")
     const [ food, setFood] = useState([]);
 
 const getFood = () => {
@@ -18,9 +19,10 @@ const getFood = () => {
 
 const addFood = () =>{
     const payload = {
-        Title: text,
         Ingredients: text,
+        Title: text,
         Time_to_cook: number,
+        Image: file
     };
     fetch("http://localhost:4567/addFood", {
         method: "POST",
@@ -41,15 +43,16 @@ const addFood = () =>{
                 <label>Title
                     <Input type="text"
                     onChange={(e)=>setText(e.target.value)}
-                    placeholder="Title"
-                    />
+                    placeholder="ingredients" />
                 </label>
 
                 <label>Ingredients 
                     <Input type="text"
                     onChange={(e)=>setText(e.target.value)}
-                    placeholder="ingredients" />
+                    placeholder="Title"
+                    />
                 </label>
+
 
                 <label> Time to Cook 
                     <Input type="number"
@@ -58,7 +61,9 @@ const addFood = () =>{
                 </label>
 
                 <label>Image 
-                    <Input type="file" placeholder="image " />
+                    <Input type="file"
+                    onChange={(e)=>setFile(e.target.value)}
+                    placeholder="image " />
                 </label>
                 <Button onClick={addFood}>Add Recipe</Button>
 
@@ -66,12 +71,11 @@ const addFood = () =>{
                 
                 {food.map((e) => (
                     <div>Title: {e.Title}</div>
-                    // <div>{e.Ingredients}</div>
                 ))}
-                {food.map((e) => (
+                {/* {food.map((e) => (
                     <div>Time_to_cook: {e.Time_to_cook} Min</div>
                     // <div>{e.Ingredients}</div>
-                ))}
+                ))} */}
         </div>
     )
 }
