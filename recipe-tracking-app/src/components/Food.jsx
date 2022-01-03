@@ -1,13 +1,21 @@
 import "../components/Addfood.css"
 import { Input, Button} from 'antd'
-import { useState } from "react"
+import { useRef, useState } from "react"
+import { type } from "@testing-library/user-event/dist/type";
 
 export const Food = () => {
 
     const [text, setText] = useState("");
     const [number, setNumber] = useState("");
-    const [file, setFile] = useState("")
     const [ food, setFood] = useState([]);
+    const [file, setFile] = useState("")
+    // const fileRef = useRef(null);
+
+    // const handleChange = (e) => {
+    //     let {name,value}= e.target
+    //     value = type ==="file" ? URL.createObjectURL(fileRef.current.files[0]): value;
+    //     setFood({...food,[name]:value})
+    // }
 
 const getFood = () => {
     fetch("http://localhost:4567/addFood")
@@ -40,37 +48,49 @@ const addFood = () =>{
     return (
         <div className="form">
             <form>
-                <label>Title
+                <h5>Title{" "}
                     <Input type="text"
                     onChange={(e)=>setText(e.target.value)}
                     placeholder="ingredients" />
-                </label>
+                </h5>
+                <br />
 
-                <label>Ingredients 
+                <h5>Ingredients {" "}
                     <Input type="text"
                     onChange={(e)=>setText(e.target.value)}
                     placeholder="Title"
                     />
-                </label>
+                </h5>
+                <br />
 
 
-                <label> Time to Cook 
+                <h5>Time to Cook {" "}
                     <Input type="number"
                     onChange={(e)=>setNumber(e.target.value)}
                     placeholder="Cooking Time" />
-                </label>
+                </h5>
+                <br />
 
-                <label>Image 
+                <h5>Image {" "}
                     <Input type="file"
+                    // onChange={handleChange}
+                    // name="Image"
+                    // ref={fileRef}
                     onChange={(e)=>setFile(e.target.value)}
                     placeholder="image " />
-                </label>
+                </h5>
+                <br />
                 <Button onClick={addFood}>Add Recipe</Button>
 
             </form>
                 
                 {food.map((e) => (
-                    <div>Title: {e.Title}</div>
+                    <div style={{
+                        "text-align": "center"
+                    }}>    
+                            Title: {e.Title}{" "},
+                            Time_to_cook: {e.Time_to_cook} <br />
+                            Image-Location: {e.Image} Min</div>
                 ))}
                 {/* {food.map((e) => (
                     <div>Time_to_cook: {e.Time_to_cook} Min</div>

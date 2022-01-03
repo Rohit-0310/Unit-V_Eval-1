@@ -5,8 +5,15 @@
     grid-template-rows: 250px;
     grid-gap: 10px;
     font-weight: 600;
+    text-align: left;
+    margin-left: 10px;
+    
 }
-
-/* label{
-    color: brown;
+/* 
+label{
+    margin-bottom: 200px;
 } */
+
+h5{
+    margin-bottom: auto;
+}
