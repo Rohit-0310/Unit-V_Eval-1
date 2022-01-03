@@ -5,6 +5,15 @@ import { useState } from "react"
 export const Food = () => {
 
     const [text, setText] = useState("");
+    const [ food, setFood] = useState([]);
+
+const getFood = () => {
+    fetch("http://localhost:4567/addFood")
+    .then((f) => f.json())
+    .then((res) =>{
+        setFood(res)
+    })
+}
 
 const addFood = () =>{
     const payload = {
@@ -17,6 +26,8 @@ const addFood = () =>{
         headers:{
             "content-type": "application/json"
         }
+    }).then(() => {
+        getFood();
     })
     
 }
@@ -49,8 +60,13 @@ const addFood = () =>{
                     <Input type="submit" value="submit" />
 
                 </label> */}
-            </form>
 
+
+            </form>
+                
+                {food.map((e) => (
+                    <div>{e.Title}</div>
+                ))}
         </div>
     )
 }
