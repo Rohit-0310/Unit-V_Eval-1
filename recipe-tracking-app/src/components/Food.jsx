@@ -5,6 +5,7 @@ import { useState } from "react"
 export const Food = () => {
 
     const [text, setText] = useState("");
+    const [number, setNumber] = useState("");
     const [ food, setFood] = useState([]);
 
 const getFood = () => {
@@ -19,6 +20,7 @@ const addFood = () =>{
     const payload = {
         Title: text,
         Ingredients: text,
+        Time_to_cook: number,
     };
     fetch("http://localhost:4567/addFood", {
         method: "POST",
@@ -44,28 +46,31 @@ const addFood = () =>{
                 </label>
 
                 <label>Ingredients 
-                    <Input type="text" placeholder="ingredients" />
+                    <Input type="text"
+                    onChange={(e)=>setText(e.target.value)}
+                    placeholder="ingredients" />
                 </label>
 
-                <Button onClick={addFood}>Add Recipe</Button>
-                {/* <label> Time to Cook 
-                    <Input type="number" placeholder="Cooking Time" />
+                <label> Time to Cook 
+                    <Input type="number"
+                    onChange={(e)=>setNumber(e.target.value)}
+                    placeholder="Cooking Time" />
                 </label>
 
                 <label>Image 
                     <Input type="file" placeholder="image " />
                 </label>
-
-                <label>
-                    <Input type="submit" value="submit" />
-
-                </label> */}
-
+                <Button onClick={addFood}>Add Recipe</Button>
 
             </form>
                 
                 {food.map((e) => (
-                    <div>{e.Title}</div>
+                    <div>Title: {e.Title}</div>
+                    // <div>{e.Ingredients}</div>
+                ))}
+                {food.map((e) => (
+                    <div>Time_to_cook: {e.Time_to_cook} Min</div>
+                    // <div>{e.Ingredients}</div>
                 ))}
         </div>
     )
