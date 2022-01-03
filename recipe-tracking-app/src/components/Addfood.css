@@ -4,6 +4,7 @@
     display: grid;
     grid-template-rows: 250px;
     grid-gap: 10px;
+    font-weight: 600;
 }
 
 /* label{
