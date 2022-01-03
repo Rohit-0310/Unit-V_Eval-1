@@ -1,0 +1,11 @@
+.form{
+    margin-top: 20px;
+    color: crimson;
+    display: grid;
+    grid-template-rows: 250px;
+    grid-gap: 10px;
+}
+
+/* label{
+    color: brown;
+} */
