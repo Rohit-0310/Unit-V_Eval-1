@@ -1,25 +1,102 @@
 {
   "addFood": [
     {
-      "Ingredients": "title11",
-      "Title": "title11",
-      "Time_to_cook": "33",
-      "Image": "C:\\fakepath\\978142.png",
+      "Title": "Boiled rice",
+      "Ingredients": "Boiled rice",
+      "Time_to_cook": "30",
+      "Image": "C:\\fakepath\\download (1).jfif",
       "id": 1
     },
     {
-      "Ingredients": "wefwf",
-      "Title": "wefwf",
-      "Time_to_cook": "33",
-      "Image": "C:\\fakepath\\5k-spider-man-far-from-home-movie-p1.jpg",
+      "Title": "Chapatti (roti)",
+      "Ingredients": "Flour (atta) Water",
+      "Time_to_cook": "5",
+      "Image": "C:\\fakepath\\download.jfif",
       "id": 2
     },
     {
-      "Ingredients": "qwefwfw",
-      "Title": "qwefwfw",
-      "Time_to_cook": "23",
-      "Image": "C:\\fakepath\\5k-spider-man-far-from-home-movie-p1.jpg",
+      "Title": "Boiled rice",
+      "Ingredients": "Boiled rice",
+      "Time_to_cook": "30",
+      "Image": "C:\\fakepath\\download (1).jfif",
       "id": 3
+    },
+    {
+      "Title": "Vegetable curry",
+      "Ingredients": "Vegetable Salt Spices Oil Water",
+      "Time_to_cook": "40",
+      "Image": "C:\\fakepath\\Vegetable-Curry.jpg",
+      "id": 4
+    },
+    {
+      "Title": "Dal",
+      "Ingredients": "Pulses Salt Spices Ghee Water",
+      "Time_to_cook": "30",
+      "Image": "C:\\fakepath\\dal-fry.jpg",
+      "id": 5
+    },
+    {
+      "Title": "Chicken/mutton/ fish curry",
+      "Ingredients": "Chicken meat/goat or sheep meat/fish meat Salt Spices Oil/Ghee Water\t",
+      "Time_to_cook": "90",
+      "Image": "C:\\fakepath\\chicken.jpg",
+      "id": 6
+    },
+    {
+      "Title": "Vegetable curry",
+      "Ingredients": "Vegetable Salt Spices Oil Water",
+      "Time_to_cook": "30",
+      "Image": "C:\\fakepath\\Vegetable-Curry.jpg",
+      "id": 7
+    },
+    {
+      "Title": "chicken",
+      "Ingredients": "chicken",
+      "Time_to_cook": "70",
+      "Image": "C:\\fakepath\\chicken.jpg",
+      "id": 8
+    },
+    {
+      "Title": "Dal",
+      "Ingredients": "Pulses Salt Spices Ghee Water",
+      "Time_to_cook": "40",
+      "Image": "C:\\fakepath\\dal-fry.jpg",
+      "id": 9
+    },
+    {
+      "Title": "Chicken",
+      "Ingredients": "Chicken meat/goat or sheep meat/fish meat Salt Spices Oil/Ghee Water",
+      "Time_to_cook": "70",
+      "Image": "C:\\fakepath\\Chicken.jpg",
+      "id": 10
+    },
+    {
+      "Title": "Boiled rice\t",
+      "Ingredients": "Raw rice Water\t",
+      "Time_to_cook": "10",
+      "Image": "C:\\fakepath\\download.jfif",
+      "id": 11
+    },
+    {
+      "Title": "Vegetable curry\t",
+      "Ingredients": "Vegetable Salt Spices Oil Water",
+      "Time_to_cook": "30",
+      "Image": "C:\\fakepath\\Vegetable-Curry.jpg",
+      "id": 12
+    },
+    {
+      "Title": "Vegetable curry",
+      "Ingredients": "Vegetable Salt Spices Oil Water\t",
+      "Time_to_cook": "30",
+      "Image": "C:\\fakepath\\Vegetable-Curry.jpg",
+      "id": 13
+    },
+    {
+      "Title": "Dal",
+      "Ingredients": "Pulses Salt Spices Ghee Water\t",
+      "Time_to_cook": "30",
+      "Image": "C:\\fakepath\\dal-fry.jpg",
+      "id": 14
     }
   ]
 }

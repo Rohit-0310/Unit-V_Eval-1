@@ -1,11 +1,11 @@
 import "../components/Addfood.css"
 import { Input, Button} from 'antd'
-import { useRef, useState } from "react"
-import { type } from "@testing-library/user-event/dist/type";
+import { useState } from "react"
 
 export const Food = () => {
 
     const [text, setText] = useState("");
+    const [intext, setIntext] = useState("")
     const [number, setNumber] = useState("");
     const [ food, setFood] = useState([]);
     const [file, setFile] = useState("")
@@ -27,8 +27,8 @@ const getFood = () => {
 
 const addFood = () =>{
     const payload = {
-        Ingredients: text,
         Title: text,
+        Ingredients: intext,
         Time_to_cook: number,
         Image: file
     };
@@ -51,17 +51,18 @@ const addFood = () =>{
                 <h5>Title{" "}
                     <Input type="text"
                     onChange={(e)=>setText(e.target.value)}
-                    placeholder="ingredients" />
+                    placeholder="Title"
+                    />
                 </h5>
                 <br />
 
                 <h5>Ingredients {" "}
                     <Input type="text"
-                    onChange={(e)=>setText(e.target.value)}
-                    placeholder="Title"
-                    />
+                    onChange={(e)=>setIntext(e.target.value)}
+                    placeholder="ingredients" />
                 </h5>
                 <br />
+
 
 
                 <h5>Time to Cook {" "}
@@ -89,8 +90,8 @@ const addFood = () =>{
                         "text-align": "center"
                     }}>    
                             Title: {e.Title}{" "},
-                            Time_to_cook: {e.Time_to_cook} <br />
-                            Image-Location: {e.Image} Min</div>
+                            Time_to_cook: {e.Time_to_cook} Min<br />
+                            Image-Location: {e.Image}</div>
                 ))}
                 {/* {food.map((e) => (
                     <div>Time_to_cook: {e.Time_to_cook} Min</div>
